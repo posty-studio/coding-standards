@@ -24,6 +24,7 @@
 		<!-- Don't force some comments -->
 		<exclude name="Squiz.Commenting.FileComment" />
 		<exclude name="Squiz.Commenting.ClassComment" />
+		<exclude name="Squiz.Commenting.FunctionComment.MissingParamComment" />
 
 		<exclude name="PHPCompatibility.FunctionDeclarations.NewClosure.Found" />
 
