@@ -1,0 +1,13 @@
+{
+	"name": "posty-studio/coding-standards",
+	"description": "Posty Studio Coding Standards",
+	"type": "phpcodesniffer-standard",
+	"license": "GPL-2.0-or-later",
+	"require": {
+		"php": ">=7.1",
+		"wp-coding-standards/wpcs": "2.3.1",
+		"phpcompatibility/phpcompatibility-wp": "^2.0.0",
+		"squizlabs/php_codesniffer": "~3.5.0",
+		"dealerdirect/phpcodesniffer-composer-installer": "^0.7.0"
+	},
+}
