@@ -41,6 +41,10 @@
 		<!-- Allow PHP tags on same line -->
 		<exclude name="Squiz.PHP.EmbeddedPhp.ContentAfterOpen" />
 		<exclude name="Squiz.PHP.EmbeddedPhp.ContentBeforeEnd" />
+		
+		<!-- Allow base 64 -->
+		<exclude name="WordPress.PHP.DiscouragedPHPFunctions.obfuscation_base64_encode"/>
+		<exclude name="WordPress.PHP.DiscouragedPHPFunctions.obfuscation_base64_decode"/>
 	</rule>
 
 
