@@ -16,15 +16,8 @@
 	<!-- Run in parallel, it's faster. -->
 	<arg name="parallel" value="8"/>
 
-	<!-- Only check the PHP, CSS and SCSS files. JS files are checked separately with JSCS and JSHint. -->
+	<!-- Only check the PHP files. -->
 	<arg name="extensions" value="php"/>
-
-	<!-- Check all files in this directory and the directories below it. -->
-	<file>.</file>
-	<exclude-pattern>node_modules</exclude-pattern>
-	<exclude-pattern>vendor</exclude-pattern>
-	<exclude-pattern>bin</exclude-pattern>
-	<exclude-pattern>tests/</exclude-pattern>
 
 	<!-- Include the WordPress ruleset. -->
 	<rule ref="WordPress">
@@ -46,21 +39,6 @@
 		<exclude name="Squiz.PHP.EmbeddedPhp.ContentBeforeEnd" />
 	</rule>
 
-	<!-- Verify that the text_domain is set to the desired text-domain.
-		 Multiple valid text domains can be provided as a comma-delimited list. -->
-	<rule ref="WordPress.WP.I18n">
-		<properties>
-			<property name="text_domain" type="array" value="social-image-generator" />
-		</properties>
-	</rule>
-
-	<!-- Allow for theme specific exceptions to the file name rules based
-		 on the theme hierarchy. -->
-	<rule ref="WordPress.Files.FileName">
-		<properties>
-			<property name="is_theme" value="true" />
-		</properties>
-	</rule>
 
 	<rule ref="WordPress.Security.EscapeOutput">
 		<properties>
@@ -105,15 +83,6 @@
 	<!-- Allow multiple variable assignments, but only outside of conditionals -->
 	<rule ref="Squiz.PHP.DisallowMultipleAssignments">
 		<exclude name="Squiz.PHP.DisallowMultipleAssignments.Found" />
-	</rule>
-
-	<!-- Verify that no WP functions are used which are deprecated or have been removed.
-		 The minimum version set here should be in line with the minimum WP version
-		 as set in the "Requires at least" tag in the readme.txt file. -->
-	<rule ref="WordPress.WP.DeprecatedFunctions">
-		<properties>
-			<property name="minimum_supported_version" value="5.3" />
-		</properties>
 	</rule>
 
 	<!-- Disallow functions where WordPress has an alternative. -->
