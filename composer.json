@@ -3,7 +3,7 @@
 	"description": "Posty Studio Coding Standards",
 	"type": "phpcodesniffer-standard",
 	"license": "GPL-2.0-or-later",
-	"require-dev": {
+	"require": {
 		"php": ">=7.1",
 		"wp-coding-standards/wpcs": "2.3.0",
 		"phpcompatibility/phpcompatibility-wp": "^2.0.0",
